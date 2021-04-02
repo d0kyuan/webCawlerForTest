@@ -23,7 +23,7 @@
 
 ## 使用
 
--   資料來源 (限在 GUI)
+-   資料加入 / 更新 (限在 GUI)
 
     ```sh
     python3 ./app/job/data.py
