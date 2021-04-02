@@ -123,7 +123,7 @@ r = requests.get("http://192.168.0.4:8080/api/region/get")
 data = json.loads(r.json())
 
 for o in data['data']:
-    # print(o)
+
     region = o['webId']
     browser.get(f"https://rent.591.com.tw/?kind=0&region={region}")
     try:
@@ -132,8 +132,6 @@ for o in data['data']:
             area.click()
     except:
         pass
-    # NOTE: FOR DEBUG
-    i = 0
 
     while doJob:
         # content
@@ -144,11 +142,6 @@ for o in data['data']:
             pageName = f'https:{a}'
             pageName = pageName.replace(' ', '')
             onePageDataSave(pageName, region)
-
-        # NOTE: FOR DEBUG
-        i += 1
-        if i == 4:
-            break
 
         pageNext = browser.find_element_by_class_name("pageNext")
         if pageNext != None:

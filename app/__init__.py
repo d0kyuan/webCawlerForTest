@@ -1,3 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+###
+# File: __init__.py
+# Project: app
+# Created Date: Thursday, April 1st 2021, 10:16:02 am
+# Author: Ray
+# -----
+# Last Modified:
+# Modified By:
+# -----
+# Copyright (c) 2021 Ray
+# -----
+# HISTORY:
+# Date      	By	Comments
+# ----------	---	----------------------------------------------------------
+###
 
 import traceback
 import datetime
@@ -143,9 +160,7 @@ class BaseModel(db.Model):
 def create_app():
 
     with app.app_context():
-        # set a 'SECRET_KEY' to enable the Flask session cookies
         app.config['SECRET_KEY'] = 'zxvz43y4y3sgz'
-        # app.config['SQLALCHEMY_ECHO'] = True
         app.config['app'] = app
         app.config['db'] = db
         app.config['BaseModel'] = BaseModel

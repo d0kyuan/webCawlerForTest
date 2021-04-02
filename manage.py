@@ -3,6 +3,6 @@ app = create_app()
 
 if __name__ == '__main__':
     try:
-        app.run(host='0.0.0.0', port=8080, debug=True)
+        app.run(host='0.0.0.0', port=8080, debug=False)
     except Exception as e:
         print(e)
